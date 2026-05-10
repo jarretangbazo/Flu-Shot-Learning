@@ -10,12 +10,11 @@ Predict the likelihood that a survey respondent received the H1N1 and seasonal f
 [![Competition](https:/img.shields.io/badge/DrivenData-%2366-blue)](https://www.drivendata.org/competitions/66/flu-shot-learning/)
 
 ---
-
+<!-- omit in toc -->
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Problem Definition](#problem-definition)
 - [Competition](#competition)
+  - [Problem Definition](#problem-definition)
   - [Task](#task)
   - [Getting the Data](#getting-the-data)
   - [Data Files](#data-files)
@@ -30,15 +29,13 @@ Predict the likelihood that a survey respondent received the H1N1 and seasonal f
 
 ---
 
-## Problem Definition
+## Competition
+
+### Problem Definition
 Public health agencies need to understand what drives vaccine acceptance and hesitancy to design effective outreach campaigns. This project builds a multi-label classifier that predicts two independent binary outcomes per respondent: HINI vaccine uptake and seasonal flu vaccine uptake.
 
 **Why it matters**
 Understanding what drives vaccine uptake (and hesitancy) allows public health agencies to design better outreach campaigns, target under-vaccinated populations, and anticipate demand. This applies directly to future pandemics, including COVID-19.
-
----
-
-## Competition
 
 ### Task
 

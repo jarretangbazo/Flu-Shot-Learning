@@ -53,15 +53,20 @@ Python | pandas | scikit-learn | XGBoost | LightGBM | SHAP | Optuna | MLflow | F
 
 ```
 flu-shot-learning/
-├── data/raw/            # Raw competition files (not committed)
-├── data/processed/      # Cleaned and engineered datasets
+├── data/
+│   ├── raw/             # Raw competition files (not committed)
+│   ├── processed/       # Cleaned and engineered datasets
 ├── notebooks/           # EDA and experimentation
+│   ├── 01_eda.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   └── 03_modeling.ipynb
 ├── src/
 │   ├── features.py      # Feature engineering functions
-│   ├── train.py         # Training and MLflow logging pipeline
-│   └── api.py           # FastAPI prediction endpoint
+│   ├── train.py         # Training and MLflow logging script
+│   └── api.py           # FastAPI deployment
 ├── models/              # Saved model files (not committed)
-├── submissions/         # Competition submission CSVs
+├── submissions/         # Competition CSV files
+├── logs/                # Prediction and monitoring logs
 ├── app.py               # Streamlit demo app
 ├── Dockerfile
 ├── requirements.txt

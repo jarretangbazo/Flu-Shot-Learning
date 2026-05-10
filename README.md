@@ -17,7 +17,7 @@ Predict the likelihood that a survey respondent received the H1N1 and seasonal f
   - [Problem Definition](#problem-definition)
   - [Task](#task)
   - [Getting the Data](#getting-the-data)
-  - [Data Files](#data-files)
+    - [Data Files](#data-files)
 - [Environment Setup](#environment-setup)
   - [Project Structure](#project-structure)
   - [Local Setup](#local-setup)
@@ -49,7 +49,7 @@ Given survey responses about a person's background, opinions, and behaviors, pre
 2. Join the competition at the link above
 3. Go to the **Data** tab and download all files into `data/raw/`
 
-### Data Files
+#### Data Files
 
 | File | Description |
 |------|-------------|

@@ -53,6 +53,7 @@ Python | pandas | scikit-learn | XGBoost | LightGBM | SHAP | Optuna | MLflow | F
 
 ## Project Structure
 
+```
 flu-shot-learning/
 ├── data/raw/            # Raw competition files (not committed)
 ├── data/processed/      # Cleaned and engineered datasets
@@ -64,8 +65,32 @@ flu-shot-learning/
 ├── models/              # Saved model files (not committed)
 ├── submissions/         # Competition submission CSVs
 ├── app.py               # Streamlit demo app
-├──
-
+├── Dockerfile
+├── requirements.txt
+```
 ---
+
+## Run Locally
+
+```bash
+git clone https://github.com/YOUR_USERNAME/flu-shot-learning.git
+cd flu-shot-learning
+python -m venv flu_env && source flu_env/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+To launch the MLflow experiment dashboard:
+```bash
+mlflow ui   # opens at http://localhost:5000
+```
+
+To run the prediction API:
+```bash
+uvicorn src.api:app --reload    #opens at http://localhost:8000
+```
+---
+
+## Competition
 
 DrivenData. (2015). *Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines.* Retrieved May 10, 2026 from https://www.drivendata.org/competitions/66/flu-shot-learning/

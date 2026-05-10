@@ -1,4 +1,6 @@
+<!-- omit in toc -->
 # Flu Shot Learning
+<!-- omit in toc -->
 ### Predict H1N1 and Seasonal Flu Vaccines
 **DrivenData Competition:** https://www.drivendata.org/competitions/66/flu-shot-learning/
 
@@ -11,21 +13,20 @@ Predict the likelihood that a survey respondent received the H1N1 and seasonal f
 
 ## Table of Contents
 
-- [Flu Shot Learning](#flu-shot-learning)
-    - [Predict H1N1 and Seasonal Flu Vaccines](#predict-h1n1-and-seasonal-flu-vaccines)
-  - [Table of Contents](#table-of-contents)
-  - [Problem Definition](#problem-definition)
-  - [Competition](#competition)
-    - [Task](#task)
-    - [Getting the Data](#getting-the-data)
-    - [Data Files](#data-files)
-  - [Environment Setup](#environment-setup)
-    - [Project Structure](#project-structure)
-    - [Local Setup](#local-setup)
-    - [Tech Stack](#tech-stack)
-  - [Results and Key Findings](#results-and-key-findings)
-    - [Results](#results)
-    - [Key Findings](#key-findings)
+- [Table of Contents](#table-of-contents)
+- [Problem Definition](#problem-definition)
+- [Competition](#competition)
+  - [Task](#task)
+  - [Getting the Data](#getting-the-data)
+  - [Data Files](#data-files)
+- [Environment Setup](#environment-setup)
+  - [Project Structure](#project-structure)
+  - [Local Setup](#local-setup)
+  - [Tech Stack](#tech-stack)
+- [Results and Key Findings](#results-and-key-findings)
+  - [Results](#results)
+  - [Key Findings](#key-findings)
+
 
 ---
 

@@ -30,18 +30,18 @@ Public health agencies need to understand what drives vaccine acceptance and hes
 ---
 
 ## Pipeline
-1. **Problem Definition**
-2. **Data loading**
-3. **Cleaning**
-4. **EDA**
-5. **Feature Engineering**
-6. **Training**
-7. **Validation**
-8. **Hyperparameter tuning**
-9. **Explainability**
-10. **Deployment**
-11. **Monitoring**
-12. **Demo**
+1. **Problem definition** — framed as multi-label classification with ROC AUC metric
+2. **Data loading** — merged features and labels on respondent_id
+3. **Cleaning** — median imputation for numeric, mode + label encoding for categorical
+4. **EDA** — identified doctor recommendation effect and opinion feature signal
+5. **Feature engineering** — opinion composites, behavior score, healthcare access index
+6. **Training** — two independent XGBoost models (one per label) + LightGBM ensemble
+7. **Validation** — 5-fold Stratified KFold; CV mean AUC 0.868
+8. **Hyperparameter tuning** — Optuna (50 trials), all runs logged to MLflow
+9. **Explainability** — SHAP feature importance for both models
+10. **Deployment** — FastAPI REST API containerized with Docker
+11. **Monitoring** — KS-test drift detection, configurable retraining triggers
+12. **Demo** — interactive Streamlit app hosted on Streamlit Community Cloud
 
 ---
 

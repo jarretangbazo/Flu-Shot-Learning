@@ -69,8 +69,11 @@ flu-shot-learning/
 │   ├── processed/       # Cleaned and engineered datasets
 ├── notebooks/           # EDA and experimentation
 │   ├── 01_eda.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   └── 03_modeling.ipynb
+│   ├── 02_data_cleaning.ipynb
+│   └── 03_feature_engineering.ipynb
+│   └── 04_baseline_models.ipynb
+│   └── 05_advanced_models.ipynb
+│   └── 06_model_evaluation.ipynb
 ├── src/
 │   ├── features.py      # Feature engineering functions
 │   ├── train.py         # Training and MLflow logging script

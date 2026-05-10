@@ -1,20 +1,20 @@
 # Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines
-Predicts the likelihood that a survey respondent received the H1N1 and seasonal flu vaccines, using background, opinion, and behavioral features from the U.S. CDC's 2009 National H1N1 Flu Survey.
+Predicts the likelihood that a survey respondent received the H1N1 and seasonal flu vaccines, using background, opinion, and behavioral features from the United States Centers for Disease Control's 2009 National H1N1 Flu Survey.
 
 [![Live Demo](https:/img.shields.io/badge/Live%20Demo-Streamlit-red)](https://url.streamlit.app)
 [![Competition](https:/img.shields.io/badge/DrivenData-%2366-blue)](https://www.drivendata.org/competitions/66/flu-shot-learning/)
 
 ---
-
 ## Problem
 Public health agencies need to understand what drives vaccine acceptance and hesitancy to design effective outreach campaigns. This project builds a multi-label classifier that predicts two independent binary outcomes per respondent: HINI vaccine uptake and seasonal flu vaccine uptake.
 
 **Data:** 26,707 survey respondents | 35 features | U.S. CDC NHFS 2009
+
 **Metric:** ROC AUC averaged across both labels
+
 **Type:** Multi-label binary classification
 
 ---
-
 ## Results
 
 | Model | H1N1 AUC | Seasonal AUC | Mean AUC |
@@ -24,11 +24,11 @@ Public health agencies need to understand what drives vaccine acceptance and hes
 | XGBoost + LightGBM ensemble | | | |
 
 ---
-
 ## Key Findings
 
----
+*Summary of key findings forthcoming*
 
+---
 ## Pipeline
 1. **Problem definition** — framed as multi-label classification with ROC AUC metric
 2. **Data loading** — merged features and labels on respondent_id
@@ -44,13 +44,11 @@ Public health agencies need to understand what drives vaccine acceptance and hes
 12. **Demo** — interactive Streamlit app hosted on Streamlit Community Cloud
 
 ---
-
 ## Tech Stack
 
 Python | pandas | scikit-learn | XGBoost | LightGBM | SHAP | Optuna | MLflow | FastAPI | Docker | Streamlit
 
 ---
-
 ## Project Structure
 
 ```
@@ -69,7 +67,6 @@ flu-shot-learning/
 ├── requirements.txt
 ```
 ---
-
 ## Run Locally
 
 ```bash
@@ -90,7 +87,6 @@ To run the prediction API:
 uvicorn src.api:app --reload    #opens at http://localhost:8000
 ```
 ---
-
 ## Competition
 
 DrivenData. (2015). *Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines.* Retrieved May 10, 2026 from https://www.drivendata.org/competitions/66/flu-shot-learning/

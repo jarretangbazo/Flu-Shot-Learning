@@ -1,55 +1,68 @@
-# Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines
-Predicts the likelihood that a survey respondent received the H1N1 and seasonal flu vaccines, using background, opinion, and behavioral features from the United States Centers for Disease Control's 2009 National H1N1 Flu Survey.
+# Flu Shot Learning
+### Predict H1N1 and Seasonal Flu Vaccines
+**DrivenData Competition:** https://www.drivendata.org/competitions/66/flu-shot-learning/
+
+Predict the likelihood that a survey respondent received the H1N1 and seasonal flu vaccines, using background, opinion, and behavioral features from the United States Centers for Disease Control's 2009 National H1N1 Flu Survey.
 
 [![Live Demo](https:/img.shields.io/badge/Live%20Demo-Streamlit-red)](https://url.streamlit.app)
 [![Competition](https:/img.shields.io/badge/DrivenData-%2366-blue)](https://www.drivendata.org/competitions/66/flu-shot-learning/)
 
 ---
-## Problem
+
+## Table of Contents
+
+- [Flu Shot Learning](#flu-shot-learning)
+    - [Predict H1N1 and Seasonal Flu Vaccines](#predict-h1n1-and-seasonal-flu-vaccines)
+  - [Table of Contents](#table-of-contents)
+  - [Problem Definition](#problem-definition)
+  - [Competition](#competition)
+    - [Task](#task)
+    - [Getting the Data](#getting-the-data)
+    - [Data Files](#data-files)
+  - [Environment Setup](#environment-setup)
+    - [Project Structure](#project-structure)
+    - [Local Setup](#local-setup)
+    - [Tech Stack](#tech-stack)
+  - [Results and Key Findings](#results-and-key-findings)
+    - [Results](#results)
+    - [Key Findings](#key-findings)
+
+---
+
+## Problem Definition
 Public health agencies need to understand what drives vaccine acceptance and hesitancy to design effective outreach campaigns. This project builds a multi-label classifier that predicts two independent binary outcomes per respondent: HINI vaccine uptake and seasonal flu vaccine uptake.
 
-**Data:** 26,707 survey respondents | 35 features | U.S. CDC NHFS 2009
-
-**Metric:** ROC AUC averaged across both labels
-
-**Type:** Multi-label binary classification
+**Why it matters**
+Understanding what drives vaccine uptake (and hesitancy) allows public health agencies to design better outreach campaigns, target under-vaccinated populations, and anticipate demand. This applies directly to future pandemics, including COVID-19.
 
 ---
-## Results
 
-| Model | H1N1 AUC | Seasonal AUC | Mean AUC |
-|-------|----------|--------------|----------|
-| Logistic Regression (baseline) | | | |
-| XGBoost (tuned) | | | |
-| XGBoost + LightGBM ensemble | | | |
+## Competition
 
----
-## Key Findings
+### Task
 
-*Summary of key findings forthcoming*
+Given survey responses about a person's background, opinions, and behaviors, predict two binary outcomes:
+- Did they receive the **H1N1 vaccine**? (`h1n1_vaccine`: 0 or 1)
+- Did they receive the **seasonal flu vaccine**? (`seasonal_vaccine`: 0 or 1)
 
----
-## Pipeline
-1. **Problem definition** — framed as multi-label classification with ROC AUC metric
-2. **Data loading** — merged features and labels on respondent_id
-3. **Cleaning** — median imputation for numeric, mode + label encoding for categorical
-4. **EDA** — identified doctor recommendation effect and opinion feature signal
-5. **Feature engineering** — opinion composites, behavior score, healthcare access index
-6. **Training** — two independent XGBoost models (one per label) + LightGBM ensemble
-7. **Validation** — 5-fold Stratified KFold; CV mean AUC 0.868
-8. **Hyperparameter tuning** — Optuna (50 trials), all runs logged to MLflow
-9. **Explainability** — SHAP feature importance for both models
-10. **Deployment** — FastAPI REST API containerized with Docker
-11. **Monitoring** — KS-test drift detection, configurable retraining triggers
-12. **Demo** — interactive Streamlit app hosted on Streamlit Community Cloud
+### Getting the Data
 
----
-## Tech Stack
+1. Sign up or log in at https://www.drivendata.org
+2. Join the competition at the link above
+3. Go to the **Data** tab and download all files into `data/raw/`
 
-Python | pandas | scikit-learn | XGBoost | LightGBM | SHAP | Optuna | MLflow | FastAPI | Docker | Streamlit
+### Data Files
 
----
-## Project Structure
+| File | Description |
+|------|-------------|
+| `training_set_features.csv` | Survey responses for ~26,700 training respondents |
+| `training_set_labels.csv` | The two vaccine targets for each training respondent |
+| `test_set_features.csv` | Survey responses for ~26,700 test respondents |
+| `submission_format.csv` | Template showing the required submission structure |
+
+## Environment Setup
+
+### Project Structure
 
 ```
 flu-shot-learning/
@@ -71,8 +84,8 @@ flu-shot-learning/
 ├── Dockerfile
 ├── requirements.txt
 ```
----
-## Run Locally
+
+### Local Setup
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/flu-shot-learning.git
@@ -91,7 +104,28 @@ To run the prediction API:
 ```bash
 uvicorn src.api:app --reload    #opens at http://localhost:8000
 ```
----
-## Competition
 
-DrivenData. (2015). *Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines.* Retrieved May 10, 2026 from https://www.drivendata.org/competitions/66/flu-shot-learning/
+### Tech Stack
+
+Python | pandas | scikit-learn | XGBoost | LightGBM | SHAP | Optuna | MLflow | FastAPI | Docker | Streamlit
+
+---
+
+## Results and Key Findings
+
+### Results
+
+| Model | H1N1 AUC | Seasonal AUC | Mean AUC |
+|-------|----------|--------------|----------|
+| Logistic Regression (baseline) | | | |
+| XGBoost (tuned) | | | |
+| XGBoost + LightGBM ensemble | | | |
+
+
+### Key Findings
+
+*Summary of key findings forthcoming*
+
+---
+
+DrivenData. (2015). *Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines.* Retrieved May 10, 2026 from https://www.drivendata.org/competitions/66/flu-shot-learning/.

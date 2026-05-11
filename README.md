@@ -74,6 +74,8 @@ flu-shot-learning/
 │   └── 04_baseline_models.ipynb
 │   └── 05_advanced_models.ipynb
 │   └── 06_model_evaluation.ipynb
+├── reports/           
+│   ├── figures
 ├── src/
 │   ├── features.py      # Feature engineering functions
 │   ├── train.py         # Training and MLflow logging script

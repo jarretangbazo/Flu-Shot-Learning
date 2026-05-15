@@ -12,6 +12,7 @@ data/processed/
 *.feather
 *.json
 *.xlsx
+.DS_Store
 
 # Keep the folder structure but not the files
 !data/.gitkeep

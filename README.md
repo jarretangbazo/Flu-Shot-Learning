@@ -75,7 +75,7 @@ flu-shot-learning/
 │   └── 05_advanced_models.ipynb                # LightGBM tuning, XGBoost, ensemble, submission
 │   └── 06_model_evaluation.ipynb               # SHAP, permutation importance, subgroup AUC
 ├── reports/           
-│   ├── figures                                  # All saved plots
+│   ├── figures                                 # All saved plots
 ├── models/                                     # Saved model files (not committed)
 ├── submissions/                                # Competition CSV files
 ├── requirements.txt

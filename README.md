@@ -66,7 +66,8 @@ Given survey responses about a person's background, opinions, and behaviors, we 
 flu-shot-learning/
 ├── data/
 │   ├── raw/                                    # Raw competition files (not committed)
-│   └── processed/                              # Cleaned and engineered datasets
+│   ├── processed/                              # Cleaned and engineered datasets
+│   └── predictions/                            # Competition CSV files
 ├── notebooks/                                  # EDA and experimentation
 │   ├── 01_eda.ipynb                            # Exploratory data analysis
 │   ├── 02_data_cleaning.ipynb                  # Imputation, encoding, missingness indicators
@@ -74,10 +75,9 @@ flu-shot-learning/
 │   ├── 04_baseline_models.ipynb                # Logistic regression, decision tree, random forest
 │   ├── 05_advanced_models.ipynb                # LightGBM tuning, XGBoost, ensemble, submission
 │   └── 06_model_evaluation.ipynb               # SHAP, permutation importance, subgroup AUC
-├── reports/           
+├── reports/                                    # Presentation files
 │   └── figures                                 # All saved plots
 ├── models/                                     # Saved model files (not committed)
-├── submissions/                                # Competition CSV files
 └── requirements.txt
 ```
 

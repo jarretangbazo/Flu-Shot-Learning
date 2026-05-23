@@ -78,7 +78,7 @@ flu-shot-learning/
 │   └── figures                                 # All saved plots
 ├── models/                                     # Saved model files (not committed)
 ├── submissions/                                # Competition CSV files
-├── requirements.txt
+└── requirements.txt
 ```
 
 ### Local Setup

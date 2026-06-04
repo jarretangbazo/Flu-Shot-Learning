@@ -6,9 +6,6 @@
 
 Predict the likelihood that a survey respondent received the H1N1 and seasonal flu vaccines, using background, opinion, and behavioral features from the United States Centers for Disease Control's 2009 National H1N1 Flu Survey.
 
-[![Live Demo](https:/img.shields.io/badge/Live%20Demo-Streamlit-red)](https://url.streamlit.app)
-[![Competition](https:/img.shields.io/badge/DrivenData-%2366-blue)](https://www.drivendata.org/competitions/66/flu-shot-learning/)
-
 ---
 <!-- omit in toc -->
 ## Table of Contents
